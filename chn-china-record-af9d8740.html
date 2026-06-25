@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>索引·信息汇流 · 雷速</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #fafaf9;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', 'Helvetica Neue', sans-serif;
+      color: #1e1e1e;
+      line-height: 1.7;
+      padding: 0 1.25rem;
+    }
+
+    .page {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 3rem 0 4rem;
+    }
+
+    /* hero 横幅 — 极简留白，仅靠文字撑起 */
+    .hero {
+      margin-bottom: 4rem;
+      border-bottom: 1px solid #e4e4e4;
+      padding-bottom: 2.5rem;
+    }
+
+    .hero-label {
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      font-weight: 370;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      color: #121212;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      background: #f1f1f0;
+      padding: 0 0.2em;
+    }
+
+    .hero p {
+      max-width: 580px;
+      color: #555;
+      font-size: 1.05rem;
+    }
+
+    /* 背景说明卡片 — 浅灰底，窄宽 */
+    .background-note {
+      background: #f2f2f1;
+      padding: 2rem 2rem 2.2rem;
+      margin-bottom: 3.2rem;
+      border-radius: 0;
+      font-size: 0.98rem;
+      color: #2c2c2c;
+    }
+
+    .background-note strong {
+      font-weight: 550;
+      color: #111;
+    }
+
+    .background-note .sig {
+      display: inline-block;
+      margin-top: 0.8rem;
+      font-size: 0.85rem;
+      color: #7a7a7a;
+      border-left: 2px solid #bbb;
+      padding-left: 1rem;
+    }
+
+    /* 三段自然介绍 */
+    .section-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 2.8rem;
+      margin-bottom: 3.8rem;
+    }
+
+    .section-item {
+      border-bottom: 1px dashed #ddd;
+      padding-bottom: 2rem;
+    }
+
+    .section-item:last-of-type {
+      border-bottom: none;
+    }
+
+    .section-item h2 {
+      font-size: 1.6rem;
+      font-weight: 380;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.6rem;
+      color: #1a1a1a;
+    }
+
+    .section-item h2 small {
+      font-size: 0.9rem;
+      font-weight: 380;
+      color: #9a9a9a;
+      margin-left: 0.5rem;
+    }
+
+    .section-item p {
+      color: #3e3e3e;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-item .meta-ref {
+      font-size: 0.85rem;
+      color: #8a8a8a;
+      margin-top: 0.35rem;
+    }
+
+    /* 一段关于索引的摘录 — 类似杂志引用框 */
+    .inset-quote {
+      background: transparent;
+      border-left: 3px solid #c6c6c5;
+      padding: 0.8rem 1.5rem 0.8rem 1.8rem;
+      margin: 2rem 0 2.4rem;
+      font-size: 1.1rem;
+      color: #2d2d2d;
+    }
+
+    .inset-quote p {
+      margin-bottom: 0.2rem;
+    }
+
+    .inset-quote .source {
+      font-size: 0.8rem;
+      color: #999;
+    }
+
+    /* 页尾提示 — 窄排版，自然锚点 */
+    .footer-hint {
+      margin-top: 3.5rem;
+      padding-top: 1.8rem;
+      border-top: 1px solid #e2e2e0;
+      font-size: 0.98rem;
+      color: #4b4b4b;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .footer-hint a {
+      color: #1a1a1a;
+      text-decoration: none;
+      border-bottom: 1px solid #b0b0b0;
+      padding-bottom: 1px;
+      font-weight: 420;
+      transition: border-color 0.2s;
+    }
+
+    .footer-hint a:hover {
+      border-bottom-color: #1a1a1a;
+    }
+
+    .footer-hint .muted {
+      color: #9b9b9b;
+      font-size: 0.85rem;
+    }
+
+    /* 响应式细节 */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2.3rem;
+      }
+      .background-note {
+        padding: 1.5rem 1.2rem;
+      }
+      .section-item h2 {
+        font-size: 1.3rem;
+      }
+      .footer-hint {
+        flex-direction: column;
+        gap: 0.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- 首页横幅 / hero -->
+  <div class="hero">
+    <div class="hero-label">资料整理 · 信息索引</div>
+    <h1>梳理，而非<em>追逐</em><br>从一份索引开始</h1>
+    <p>日常阅读、赛事记录、数据归档——当信息涌来，我们更需要一个安静的起点。这里不是门户，是案头的一叠卡片。</p>
+  </div>
+
+  <!-- 背景说明：为什么做这样的索引 -->
+  <div class="background-note">
+    <strong>关于这个索引背景</strong> 大多数时候，我们打开一个网站是为了快速找到什么，而不是被导航栏推着走。<br>
+    这个页面所指向的 <a href="https://chn-china-leisu.com" style="color:#1e1e1e; text-decoration:underline; text-underline-offset:3px; text-decoration-thickness:1px;">雷速</a> 站点，本身就是一个以信息聚合和快速检索为出发点的整理型平台。没有繁杂的前置引导，只有分类后的内容等待取用。你在这里看到的，就是它的缩影：窄窄的版面，克制的视觉，只提供必要的上下文。
+    <div class="sig">—— 信息整理者手记，2025</div>
+  </div>
+
+  <!-- 三段自然介绍：从资料整理和索引角度展开 -->
+  <div class="section-grid">
+
+    <div class="section-item">
+      <h2>01 / 把散落的条目归位 <small>整理逻辑</small></h2>
+      <p>无论是一场比赛的进程、一份选手名单，还是一组历史数据，在 <a href="https://chn-china-leisu.com" style="color:#1e1e1e; text-decoration:underline; text-underline-offset:2px;">雷速</a> 里它们都以条目方式呈现。没有排行榜式的喧哗，只有按时间、类别或标签排列的安静序列。你可以像翻阅一本活页笔记本那样，按需抽取。</p>
+      <p>这种索引方式不追求“最新”，而是追求“可被找到”。对于长期关注某个领域的人来说，这种结构比滚动刷新更可靠。</p>
+      <div class="meta-ref">→ 索引类型：时序 / 分类 / 标签</div>
+    </div>
+
+    <div class="section-item">
+      <h2>02 / 不做首页上的横幅 <small>界面哲学</small></h2>
+      <p>很多网站把首页当作广告牌，但这里选择把首页当作目录。第一屏没有轮播图、弹窗或倒计时，只有最朴素的文字入口。正如你在本页所见，信息本身应该自己说话，而不是被设计包装成“爆点”。</p>
+      <p>在 <a href="https://chn-china-leisu.com" style="color:#1e1e1e; text-decoration:underline; text-underline-offset:2px;">雷速</a> 上，每个条目都拥有平等的可见性——它不因为你来的时间早晚而改变权重。这种静态感，反而让查阅变得更专注。</p>
+    </div>
+
+    <div class="section-item">
+      <h2>03 / 适合什么场景？ <small>日常索引</small></h2>
+      <p>写分析文章前查证某个赛季的细节；做播客前快速浏览近期事件线；或者只是午后漫无目的地翻翻归档——这些场景都适合打开这个索引。它没有催促你“马上阅读”，而是把选择权放在你手里。</p>
+      <p>你可以通过 <a href="https://chn-china-leisu.com" style="color:#1e1e1e; text-decoration:underline; text-underline-offset:2px;">雷速</a> 直接进入条目列表，也可以把它当作一个常驻的书签栏。真正的资料整理，往往就始于这样一个简单的动作：点开，浏览，找到你需要的那个片段。</p>
+    </div>
+
+  </div>
+
+  <!-- 杂志风格引用框 — 类似FAQ摘要  -->
+  <div class="inset-quote">
+    <p>“一个好的索引，不是把所有东西堆在你面前，而是告诉你东西在哪里，然后让你自己走过去。”</p>
+    <div class="source">—— 摘自《整理术：离线信息手册》</div>
+  </div>
+
+  <!-- 页尾访问提示 — 自然嵌入链接，符合“可见文本严格等于雷速” -->
+  <div class="footer-hint">
+    <span>如果你需要持续使用这个资料索引，不妨把 <a href="https://chn-china-leisu.com">雷速</a> 加入书签栏。它一直在那里，不闪动，不推送。</span>
+    <span class="muted">索引构建 · 安静版</span>
+  </div>
+
+</div>
+</body>
+</html>
